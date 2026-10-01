@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,9 +7,21 @@
     <meta name="description"
         content="Shivam Kumar — B.Tech CSE student specializing in Full-Stack Development, Machine Learning, and AI systems. Based in Bhopal, India." />
     <meta name="keywords"
-        content="Shivam Kumar, Full Stack Developer, ML Engineer, Portfolio, Python, Flask, Java, JavaScript" />
+        content="Shivam Kumar, Full Stack Developer, ML Engineer, Portfolio, Python, Flask, Java, JavaScript, AI Systems" />
     <meta name="author" content="Shivam Kumar" />
+    <meta name="theme-color" content="#0c0d10" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shivam Kumar — Developer &amp; ML Engineer" />
+    <meta property="og:description"
+        content="B.Tech CSE student building end-to-end web applications and intelligent ML systems — from Flask APIs to AI-powered advisors." />
+    <meta property="og:url" content="https://shivam7022.github.io/Portfolio/" />
+    <meta property="og:image" content="Images/hero_bg.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>Shivam Kumar — Developer &amp; ML Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +31,14 @@
 </head>
 
 <body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Mouse Ambient Spotlight Glow (Desktop) -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Toast Notification for Actions -->
+    <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
 
     <!-- NAV -->
     <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
@@ -130,6 +150,35 @@
         </a>
     </section>
 
+    <!-- TECH STACK TICKER -->
+    <div class="tech-ticker" aria-label="Core technologies marquee">
+        <div class="tech-ticker__track">
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Python</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Flask API</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Machine Learning</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> MySQL Database</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> AI Agents</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Java &amp; DSA</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> JavaScript ES6+</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> RESTful APIs</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Deep Learning</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Speech-to-Text</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Git &amp; GitHub</span>
+            <!-- Seamless loop duplicate -->
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Python</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Flask API</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Machine Learning</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> MySQL Database</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> AI Agents</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Java &amp; DSA</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> JavaScript ES6+</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> RESTful APIs</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Deep Learning</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Speech-to-Text</span>
+            <span class="ticker-item"><span class="ticker-dot">✦</span> Git &amp; GitHub</span>
+        </div>
+    </div>
+
     <!-- ABOUT -->
     <section class="section about" id="about" aria-labelledby="about-heading">
         <div class="container">
@@ -157,7 +206,7 @@
                         <div class="about__meta-card"><span class="about__meta-label">Degree</span><span
                                 class="about__meta-value">B.Tech CSE<br />Class of 2027</span></div>
                         <div class="about__meta-card"><span class="about__meta-label">CGPA</span><span
-                                class="about__meta-value about__meta-value--big">7.33<span>/10</span></span></div>
+                                class="about__meta-value about__meta-value--big"><span class="count-up" data-target="7.33" data-decimals="2">7.33</span><span>/10</span></span></div>
                         <div class="about__meta-card"><span class="about__meta-label">Focus</span><span
                                 class="about__meta-value">Full-Stack<br />+ ML / AI</span></div>
                         <div class="about__meta-card about__meta-card--wide"><span
@@ -166,6 +215,25 @@
                         <div class="about__meta-card about__meta-card--wide about__meta-card--highlight"><span
                                 class="about__meta-label">Currently Building</span><span class="about__meta-value">AI
                                 Agent Smart Farming Advisory System &#x1F680;</span></div>
+                    </div>
+                    <!-- Quick Stats Badges -->
+                    <div class="about__stats-row reveal reveal--delay-3">
+                        <div class="stat-pill">
+                            <span class="stat-pill__num"><span class="count-up" data-target="5">0</span>+</span>
+                            <span class="stat-pill__label">Core Projects</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-pill__num"><span class="count-up" data-target="7">0</span>+</span>
+                            <span class="stat-pill__label">Certifications</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-pill__num"><span class="count-up" data-target="7.33" data-decimals="2">0.00</span></span>
+                            <span class="stat-pill__label">CGPA</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-pill__num">2027</span>
+                            <span class="stat-pill__label">Graduation</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,9 +248,26 @@
                     class="text-accent">Matter</span></h2>
             <p class="section-sub reveal reveal--delay-1">Five projects spanning web development, machine learning, and
                 AI systems — each tackling a distinct real-world challenge.</p>
-            <div class="projects__grid">
 
-                <article class="project-card project-card--featured reveal">
+            <!-- Interactive Project Filter Tabs -->
+            <div class="projects-filter reveal reveal--delay-2" role="tablist" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                    <span>All Projects</span> <span class="filter-count">5</span>
+                </button>
+                <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">
+                    <span>AI &amp; Machine Learning</span> <span class="filter-count">3</span>
+                </button>
+                <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">
+                    <span>Smart Systems</span> <span class="filter-count">1</span>
+                </button>
+                <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">
+                    <span>Full-Stack Web</span> <span class="filter-count">1</span>
+                </button>
+            </div>
+
+            <div class="projects__grid" id="projects-grid">
+
+                <article class="project-card project-card--featured reveal" data-category="ai">
                     <div class="project-card__image-wrap">
                         <img src="Images/project_farming.jpg" alt="AI Smart Farming Advisory System"
                             class="project-card__image" loading="lazy" />
@@ -208,7 +293,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal reveal--delay-1">
+                <article class="project-card reveal reveal--delay-1" data-category="ai">
                     <div class="project-card__image-wrap">
                         <img src="Images/project_scam.jpg" alt="Grandparent Guardian Scam Call Interceptor"
                             class="project-card__image" loading="lazy" />
@@ -231,7 +316,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal reveal--delay-2">
+                <article class="project-card reveal reveal--delay-2" data-category="ai">
                     <div class="project-card__image-wrap">
                         <img src="Images/project_plant.jpg" alt="Plant Disease Detection ML System"
                             class="project-card__image" loading="lazy" />
@@ -254,7 +339,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal reveal--delay-1">
+                <article class="project-card reveal reveal--delay-1" data-category="systems">
                     <div class="project-card__image-wrap">
                         <img src="Images/project_traffic.jpg" alt="Adaptive Traffic Flow Optimization System"
                             class="project-card__image" loading="lazy" />
@@ -277,7 +362,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal reveal--delay-2">
+                <article class="project-card reveal reveal--delay-2" data-category="web">
                     <div class="project-card__image-wrap">
                         <img src="Images/project_weather.jpg" alt="Weather Web Application" class="project-card__image"
                             loading="lazy" />
@@ -524,21 +609,30 @@
                     <p class="contact__sub">Open to Full-Stack Developer, ML Engineer, and Software Developer internship
                         or entry-level opportunities. Let's connect.</p>
                     <div class="contact__links">
-                        <a href="mailto:kumarshivam8210023851@gmail.com" class="contact__link" id="contact-email">
-                            <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="1.5" width="20" height="20">
-                                    <path
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        <div class="contact__link-wrap">
+                            <a href="mailto:kumarshivam8210023851@gmail.com" class="contact__link" id="contact-email">
+                                <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                                        <path
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></div>
+                                <div class="contact__link-text"><span class="contact__link-label">Email</span><span
+                                        class="contact__link-value">kumarshivam8210023851@gmail.com</span></div>
+                                <svg class="contact__link-arrow" viewBox="0 0 16 16" fill="none" width="16" height="16"
+                                    aria-hidden="true">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
                                         stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></div>
-                            <div class="contact__link-text"><span class="contact__link-label">Email</span><span
-                                    class="contact__link-value">kumarshivam8210023851@gmail.com</span></div>
-                            <svg class="contact__link-arrow" viewBox="0 0 16 16" fill="none" width="16" height="16"
-                                aria-hidden="true">
-                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+                                </svg>
+                            </a>
+                            <button type="button" class="btn-copy-email" id="copy-email-btn" title="Copy email address" aria-label="Copy email address">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
                         <a href="https://github.com/shivam7022" target="_blank" rel="noopener" class="contact__link"
                             id="contact-github">
                             <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
@@ -572,7 +666,10 @@
                     </div>
                 </div>
                 <div class="contact__right reveal reveal--delay-2">
-                    <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+                    <form class="contact-form" id="contact-form" novalidate aria-label="Contact form" action="https://formsubmit.co/kumarshivam8210023851@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_subject" value="New Portfolio Inquiry from Shivam's Website" />
+                        <input type="hidden" name="_template" value="table" />
                         <div class="form-group"><label for="form-name" class="form-label">Your Name</label><input
                                 type="text" id="form-name" name="name" class="form-input" placeholder="John Doe"
                                 required autocomplete="name" /></div>

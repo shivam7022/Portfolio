@@ -1544,3 +1544,292 @@ body {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* ============================================================
+   ENHANCED INTERACTIVE COMPONENTS
+   ============================================================ */
+
+/* 1. Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0077ff, #00e5ff, #00ffc8);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.8), 0 0 4px rgba(0, 229, 255, 0.5);
+  z-index: 10001;
+  pointer-events: none;
+  transition: width 0.08s ease-out;
+}
+
+/* 2. Desktop Cursor Ambient Spotlight Glow */
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0, 183, 255, 0.09) 0%, rgba(0, 183, 255, 0.02) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.has-glow .cursor-glow {
+  opacity: 1;
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .cursor-glow {
+    display: none !important;
+  }
+}
+
+/* 3. Tech Stack Marquee Ticker */
+.tech-ticker {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+  background: rgba(14, 16, 22, 0.7);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.tech-ticker__track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  white-space: nowrap;
+  animation: tickerScroll 38s linear infinite;
+}
+
+.tech-ticker:hover .tech-ticker__track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.ticker-item:hover {
+  color: var(--accent);
+}
+
+.ticker-dot {
+  color: var(--accent);
+  font-size: 0.7rem;
+  filter: drop-shadow(0 0 6px rgba(0, 183, 255, 0.8));
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 4. About Quick Stats Row */
+.about__stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.stat-pill:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 183, 255, 0.1);
+}
+
+.stat-pill__num {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.stat-pill__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+@media (max-width: 768px) {
+  .about__stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 5. Projects Category Filter Tabs */
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+
+.filter-btn:hover {
+  border-color: rgba(0, 183, 255, 0.4);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.filter-btn.active {
+  background: rgba(0, 183, 255, 0.12);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 183, 255, 0.2);
+}
+
+.filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.filter-btn.active .filter-count {
+  background: var(--accent);
+  color: #000;
+}
+
+.project-card {
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), border-color 0.25s;
+}
+
+.project-card.is-hidden {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+/* 6. Contact Email Wrap & Copy Button */
+.contact__link-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.contact__link-wrap .contact__link {
+  flex: 1;
+}
+
+.btn-copy-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-2);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  white-space: nowrap;
+}
+
+.btn-copy-email:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 183, 255, 0.08);
+}
+
+.btn-copy-email:active {
+  transform: scale(0.96);
+}
+
+.btn-copy-email.copied {
+  border-color: #00ff9d;
+  color: #00ff9d;
+  background: rgba(0, 255, 157, 0.1);
+}
+
+/* 7. Toast Notification */
+.toast-notice {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translate(-50%, 40px);
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(17, 19, 24, 0.95);
+  border: 1px solid rgba(0, 183, 255, 0.4);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 183, 255, 0.2);
+  backdrop-filter: blur(12px);
+  z-index: 10002;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.toast-notice.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+}
