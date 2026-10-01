@@ -1,1 +1,639 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Shivam Kumar — B.Tech CSE student specializing in Full-Stack Development, Machine Learning, and AI systems. Based in Bhopal, India." />
+    <meta name="keywords"
+        content="Shivam Kumar, Full Stack Developer, ML Engineer, Portfolio, Python, Flask, Java, JavaScript" />
+    <meta name="author" content="Shivam Kumar" />
+    <title>Shivam Kumar — Developer &amp; ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__logo" aria-label="Shivam Kumar - Home">
+                <span class="nav__logo-initials">SK</span>
+                <span class="nav__logo-name">Shivam Kumar</span>
+            </a>
+            <ul class="nav__links" role="list">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#education" class="nav__link">Education</a></li>
+                <li><a href="#certifications" class="nav__link">Certs</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn--nav" id="nav-cta">Let's Talk</a>
+            <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+            </button>
+        </div>
+        <div class="nav__mobile" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <ul class="nav__mobile-links" role="list">
+                <li><a href="#about" class="nav__mobile-link">About</a></li>
+                <li><a href="#projects" class="nav__mobile-link">Projects</a></li>
+                <li><a href="#skills" class="nav__mobile-link">Skills</a></li>
+                <li><a href="#education" class="nav__mobile-link">Education</a></li>
+                <li><a href="#certifications" class="nav__mobile-link">Certifications</a></li>
+                <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+                <li><a href="Images/Shivam_Kumar_Resume.pdf" class="nav__mobile-link" target="_blank"
+                        rel="noopener">Download Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+        <div class="hero__bg">
+            <img src="Images/hero_bg.jpg" alt="" role="presentation" class="hero__bg-img" />
+            <div class="hero__bg-overlay"></div>
+            <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+            <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+        </div>
+        <div class="hero__content">
+            <div class="hero__tag reveal">
+                <span class="hero__tag-dot" aria-hidden="true"></span>
+                Available for Internships &amp; Entry-Level Roles
+            </div>
+            <h1 class="hero__name reveal reveal--delay-1">
+                <span class="hero__name-line">Shivam</span>
+                <span class="hero__name-line hero__name-line--accent">Kumar.</span>
+            </h1>
+            <p class="hero__title reveal reveal--delay-2">
+                Full-Stack Developer <span class="hero__title-sep" aria-hidden="true">/</span> ML Engineer
+            </p>
+            <p class="hero__intro reveal reveal--delay-3">
+                B.Tech CSE student building end-to-end web applications and intelligent ML systems — from Flask APIs to
+                AI-powered advisors.
+            </p>
+            <div class="hero__actions reveal reveal--delay-4">
+                <a href="#projects" class="btn btn--primary magnetic-btn" id="hero-view-work">
+                    <span>View My Work</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="Images/Shivam_Kumar_Resume.pdf" target="_blank" rel="noopener" class="btn btn--outline"
+                    id="hero-download-resume">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M8 2v8M5 7l3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+            <div class="hero__socials reveal reveal--delay-5">
+                <a href="https://github.com/shivam7022" target="_blank" rel="noopener" class="hero__social"
+                    aria-label="GitHub profile">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                </a>
+                <a href="mailto:kumarshivam8210023851@gmail.com" class="hero__social" aria-label="Email Shivam Kumar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"
+                        aria-hidden="true">
+                        <path
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero__float hero__float--1 reveal reveal--delay-5" aria-hidden="true">
+            <span class="hero__float-label">Stack</span>
+            <div class="hero__float-tags"><span>Flask</span><span>Python</span><span>MySQL</span></div>
+        </div>
+        <div class="hero__float hero__float--2 reveal reveal--delay-5" aria-hidden="true">
+            <span class="hero__float-label">Focus</span>
+            <div class="hero__float-tags"><span>AI Agents</span><span>ML</span></div>
+        </div>
+        <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+            <span class="hero__scroll-text">Scroll</span>
+            <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="section-label reveal">About Me</div>
+            <div class="about__grid">
+                <div class="about__left">
+                    <h2 id="about-heading" class="about__heading reveal">
+                        Building software that<br /><span class="text-accent">solves real problems.</span>
+                    </h2>
+                    <p class="about__bio reveal reveal--delay-1">I'm Shivam Kumar, a Computer Science and Engineering
+                        student at Jagran Lakecity University, Bhopal (Class of 2027). I focus on building end-to-end
+                        web applications and intelligent ML systems that go beyond the screen.</p>
+                    <p class="about__bio reveal reveal--delay-2">My work spans responsive frontends, Flask-powered
+                        backends, MySQL databases, image classification models, speech-to-text AI systems, and AI-agent
+                        pipelines. Currently developing an AI Agent Smart Farming Advisory System.</p>
+                    <div class="about__cta reveal reveal--delay-3">
+                        <a href="#projects" class="btn btn--primary">See My Projects</a>
+                        <a href="mailto:kumarshivam8210023851@gmail.com" class="btn btn--ghost">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="about__right reveal reveal--delay-2">
+                    <div class="about__meta-grid">
+                        <div class="about__meta-card"><span class="about__meta-label">Based in</span><span
+                                class="about__meta-value">Bhopal, MP<br />India</span></div>
+                        <div class="about__meta-card"><span class="about__meta-label">Degree</span><span
+                                class="about__meta-value">B.Tech CSE<br />Class of 2027</span></div>
+                        <div class="about__meta-card"><span class="about__meta-label">CGPA</span><span
+                                class="about__meta-value about__meta-value--big">7.33<span>/10</span></span></div>
+                        <div class="about__meta-card"><span class="about__meta-label">Focus</span><span
+                                class="about__meta-value">Full-Stack<br />+ ML / AI</span></div>
+                        <div class="about__meta-card about__meta-card--wide"><span
+                                class="about__meta-label">Seeking</span><span class="about__meta-value">Internship /
+                                Entry-Level in Full-Stack, ML Engineering, Software Dev</span></div>
+                        <div class="about__meta-card about__meta-card--wide about__meta-card--highlight"><span
+                                class="about__meta-label">Currently Building</span><span class="about__meta-value">AI
+                                Agent Smart Farming Advisory System &#x1F680;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+            <div class="section-label reveal">Selected Work</div>
+            <h2 id="projects-heading" class="section-heading reveal">Projects that <span
+                    class="text-accent">Matter</span></h2>
+            <p class="section-sub reveal reveal--delay-1">Five projects spanning web development, machine learning, and
+                AI systems — each tackling a distinct real-world challenge.</p>
+            <div class="projects__grid">
+
+                <article class="project-card project-card--featured reveal">
+                    <div class="project-card__image-wrap">
+                        <img src="Images/project_farming.jpg" alt="AI Smart Farming Advisory System"
+                            class="project-card__image" loading="lazy" />
+                        <div class="project-card__image-overlay" aria-hidden="true"></div>
+                        <div class="project-card__badge">Ongoing</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta"><span class="project-card__date">Aug 2026 – Dec 2026</span><span
+                                class="project-card__type">AI / Agents</span></div>
+                        <h3 class="project-card__title">AI Agent Smart Farming Advisory System</h3>
+                        <p class="project-card__desc">An AI-powered advisory platform providing crop, fertilizer, and
+                            weather recommendations. Implements autonomous AI agents to deliver personalized farming
+                            guidance based on real-time conditions.</p>
+                        <div class="project-card__tags"><span class="tag">AI Agents</span><span
+                                class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">REST
+                                API</span></div>
+                        <div class="project-card__links"><a href="https://github.com/shivam7022" target="_blank"
+                                rel="noopener" class="project-card__link" aria-label="View on GitHub"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>GitHub</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal--delay-1">
+                    <div class="project-card__image-wrap">
+                        <img src="Images/project_scam.jpg" alt="Grandparent Guardian Scam Call Interceptor"
+                            class="project-card__image" loading="lazy" />
+                        <div class="project-card__image-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta"><span class="project-card__date">Apr 2026</span><span
+                                class="project-card__type">AI / Security</span></div>
+                        <h3 class="project-card__title">Grandparent Guardian</h3>
+                        <p class="project-card__desc">An AI-based scam call detection system using speech-to-text and ML
+                            to identify fraudulent calls in real-time and alert users instantly.</p>
+                        <div class="project-card__tags"><span class="tag">Speech-to-Text</span><span
+                                class="tag">Python</span><span class="tag">ML Classification</span></div>
+                        <div class="project-card__links"><a href="https://github.com/shivam7022" target="_blank"
+                                rel="noopener" class="project-card__link" aria-label="View on GitHub"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>GitHub</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal--delay-2">
+                    <div class="project-card__image-wrap">
+                        <img src="Images/project_plant.jpg" alt="Plant Disease Detection ML System"
+                            class="project-card__image" loading="lazy" />
+                        <div class="project-card__image-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta"><span class="project-card__date">Feb 2026 – May 2026</span><span
+                                class="project-card__type">Machine Learning</span></div>
+                        <h3 class="project-card__title">Plant Disease Detection</h3>
+                        <p class="project-card__desc">ML-based system that detects plant diseases from leaf images using
+                            image processing and classification techniques for accurate diagnosis.</p>
+                        <div class="project-card__tags"><span class="tag">Image Classification</span><span
+                                class="tag">Python</span><span class="tag">Image Processing</span></div>
+                        <div class="project-card__links"><a href="https://github.com/shivam7022" target="_blank"
+                                rel="noopener" class="project-card__link" aria-label="View on GitHub"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>GitHub</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal--delay-1">
+                    <div class="project-card__image-wrap">
+                        <img src="Images/project_traffic.jpg" alt="Adaptive Traffic Flow Optimization System"
+                            class="project-card__image" loading="lazy" />
+                        <div class="project-card__image-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta"><span class="project-card__date">Sep 2025 – Dec 2025</span><span
+                                class="project-card__type">Smart Systems</span></div>
+                        <h3 class="project-card__title">Adaptive Traffic Flow Optimization</h3>
+                        <p class="project-card__desc">Smart traffic signal system with dynamic timing logic that
+                            optimizes flow based on real-time conditions, reducing congestion and waiting times.</p>
+                        <div class="project-card__tags"><span class="tag">Python</span><span
+                                class="tag">Algorithms</span><span class="tag">Real-time Systems</span></div>
+                        <div class="project-card__links"><a href="https://github.com/shivam7022" target="_blank"
+                                rel="noopener" class="project-card__link" aria-label="View on GitHub"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>GitHub</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal--delay-2">
+                    <div class="project-card__image-wrap">
+                        <img src="Images/project_weather.jpg" alt="Weather Web Application" class="project-card__image"
+                            loading="lazy" />
+                        <div class="project-card__image-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta"><span class="project-card__date">Feb 2025 – Apr 2025</span><span
+                                class="project-card__type">Full-Stack Web</span></div>
+                        <h3 class="project-card__title">Weather Web Application</h3>
+                        <p class="project-card__desc">Responsive web application displaying real-time weather data via
+                            public APIs. Clean UI with location-based weather retrieval and dynamic display.</p>
+                        <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">REST API</span></div>
+                        <div class="project-card__links"><a href="https://github.com/shivam7022" target="_blank"
+                                rel="noopener" class="project-card__link" aria-label="View on GitHub"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>GitHub</a></div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+            <div class="section-label reveal">Technical Arsenal</div>
+            <h2 id="skills-heading" class="section-heading reveal">Skills &amp; <span
+                    class="text-accent">Technologies</span></h2>
+            <div class="skills__bento">
+                <div class="skills__card skills__card--lg reveal">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Frontend</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">HTML5</span><span
+                            class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span
+                            class="skill-tag">Responsive Design</span></div>
+                </div>
+                <div class="skills__card reveal reveal--delay-1">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Backend</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">Flask</span><span class="skill-tag">REST
+                            API</span></div>
+                </div>
+                <div class="skills__card reveal reveal--delay-2">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path
+                                    d="M3 5v6c0 1.657 4.03 3 9 3s9-1.343 9-3V5M3 11v6c0 1.657 4.03 3 9 3s9-1.343 9-3v-6"
+                                    stroke-linecap="round" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Database</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">MySQL</span><span
+                            class="skill-tag">SQL</span><span class="skill-tag">Database Design</span></div>
+                </div>
+                <div class="skills__card skills__card--lg reveal reveal--delay-1">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <path
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Machine Learning &amp; AI</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">Classification Models</span><span
+                            class="skill-tag">Prediction Models</span><span class="skill-tag">Image
+                            Processing</span><span class="skill-tag">Speech-to-Text</span><span class="skill-tag">AI
+                            Agents</span></div>
+                </div>
+                <div class="skills__card reveal">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <path d="M16 18l6-6-6-6M8 6L2 12l6 6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Programming</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">Java</span><span
+                            class="skill-tag">Python</span><span class="skill-tag">DSA</span></div>
+                </div>
+                <div class="skills__card reveal reveal--delay-1">
+                    <div class="skills__card-header">
+                        <div class="skills__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" width="22" height="22">
+                                <path
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                                    stroke-linecap="round" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></div>
+                        <h3 class="skills__card-title">Tools</h3>
+                    </div>
+                    <div class="skills__tags"><span class="skill-tag">Git &amp; GitHub</span><span class="skill-tag">VS
+                            Code</span><span class="skill-tag">Android Studio</span><span class="skill-tag">Jupyter
+                            Notebook</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section education" id="education" aria-labelledby="education-heading">
+        <div class="container">
+            <div class="section-label reveal">Academic Background</div>
+            <h2 id="education-heading" class="section-heading reveal">Education</h2>
+            <div class="education__timeline">
+                <div class="edu-card reveal">
+                    <div class="edu-card__dot" aria-hidden="true"></div>
+                    <div class="edu-card__content">
+                        <div class="edu-card__header">
+                            <div>
+                                <h3 class="edu-card__degree">B.Tech in Computer Science &amp; Engineering</h3>
+                                <p class="edu-card__institution">Jagran Lakecity University, Bhopal, MP</p>
+                            </div>
+                            <div class="edu-card__right"><span class="edu-card__date">2023 – 2027</span><span
+                                    class="edu-card__gpa">CGPA: 7.33 / 10</span></div>
+                        </div>
+                        <div class="edu-card__tags"><span class="tag">Full-Stack Dev</span><span class="tag">Machine
+                                Learning</span><span class="tag">DSA</span><span class="tag">AI Systems</span></div>
+                    </div>
+                </div>
+                <div class="edu-card reveal reveal--delay-1">
+                    <div class="edu-card__dot" aria-hidden="true"></div>
+                    <div class="edu-card__content">
+                        <div class="edu-card__header">
+                            <div>
+                                <h3 class="edu-card__degree">Higher Secondary (12th Grade)</h3>
+                                <p class="edu-card__institution">DAV Public School Kusunda, Dhanbad, Jharkhand</p>
+                            </div>
+                            <div class="edu-card__right"><span class="edu-card__date">2022</span><span
+                                    class="edu-card__gpa">72%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section certifications" id="certifications" aria-labelledby="certifications-heading">
+        <div class="container">
+            <div class="section-label reveal">Credentials</div>
+            <h2 id="certifications-heading" class="section-heading reveal">Certifications &amp; <span
+                    class="text-accent">Recognition</span></h2>
+            <div class="certs__grid">
+                <div class="cert-card reveal">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">DSA using Java</h3>
+                    <p class="cert-card__issuer">Data Structures &amp; Algorithms</p>
+                </div>
+                <div class="cert-card reveal reveal--delay-1">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">Python Programming</h3>
+                    <p class="cert-card__issuer">Programming Languages</p>
+                </div>
+                <div class="cert-card reveal reveal--delay-2">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">Full Stack AI Engineering</h3>
+                    <p class="cert-card__issuer">AI &amp; Engineering</p>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">MAST Certificate</h3>
+                    <p class="cert-card__issuer">Professional Certification</p>
+                </div>
+                <div class="cert-card reveal reveal--delay-1">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">OpenAI Certificate</h3>
+                    <p class="cert-card__issuer">OpenAI</p>
+                </div>
+                <div class="cert-card reveal reveal--delay-2">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">Microsoft Azure Certificate</h3>
+                    <p class="cert-card__issuer">Microsoft</p>
+                </div>
+                <div class="cert-card reveal reveal--delay-1">
+                    <div class="cert-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3 class="cert-card__title">AWS Certificate</h3>
+                    <p class="cert-card__issuer">Amazon Web Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__left reveal">
+                    <div class="section-label">Get In Touch</div>
+                    <h2 id="contact-heading" class="contact__heading">Have a project<br />in mind?<br /><span
+                            class="text-accent">Let's build it.</span></h2>
+                    <p class="contact__sub">Open to Full-Stack Developer, ML Engineer, and Software Developer internship
+                        or entry-level opportunities. Let's connect.</p>
+                    <div class="contact__links">
+                        <a href="mailto:kumarshivam8210023851@gmail.com" class="contact__link" id="contact-email">
+                            <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></div>
+                            <div class="contact__link-text"><span class="contact__link-label">Email</span><span
+                                    class="contact__link-value">kumarshivam8210023851@gmail.com</span></div>
+                            <svg class="contact__link-arrow" viewBox="0 0 16 16" fill="none" width="16" height="16"
+                                aria-hidden="true">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/shivam7022" target="_blank" rel="noopener" class="contact__link"
+                            id="contact-github">
+                            <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                                    fill="currentColor" width="20" height="20">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg></div>
+                            <div class="contact__link-text"><span class="contact__link-label">GitHub</span><span
+                                    class="contact__link-value">github.com/shivam7022</span></div>
+                            <svg class="contact__link-arrow" viewBox="0 0 16 16" fill="none" width="16" height="16"
+                                aria-hidden="true">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+917763848516" class="contact__link" id="contact-phone">
+                            <div class="contact__link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></div>
+                            <div class="contact__link-text"><span class="contact__link-label">Phone</span><span
+                                    class="contact__link-value">+91 7763848516</span></div>
+                            <svg class="contact__link-arrow" viewBox="0 0 16 16" fill="none" width="16" height="16"
+                                aria-hidden="true">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__right reveal reveal--delay-2">
+                    <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+                        <div class="form-group"><label for="form-name" class="form-label">Your Name</label><input
+                                type="text" id="form-name" name="name" class="form-input" placeholder="John Doe"
+                                required autocomplete="name" /></div>
+                        <div class="form-group"><label for="form-email" class="form-label">Email Address</label><input
+                                type="email" id="form-email" name="email" class="form-input"
+                                placeholder="you@example.com" required autocomplete="email" /></div>
+                        <div class="form-group"><label for="form-message" class="form-label">Message</label><textarea
+                                id="form-message" name="message" class="form-textarea"
+                                placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full magnetic-btn"
+                            id="contact-submit"><span>Send Message</span><svg width="16" height="16" viewBox="0 0 16 16"
+                                fill="none" aria-hidden="true">
+                                <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                        <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__logo"><span class="nav__logo-initials">SK</span></div>
+                    <div>
+                        <p class="footer__name">Shivam Kumar</p>
+                        <p class="footer__title-small">Full-Stack Developer &middot; ML Engineer</p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <a href="https://github.com/shivam7022" target="_blank" rel="noopener" class="footer__social"
+                        aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"
+                            aria-hidden="true">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                        </svg></a>
+                    <a href="mailto:kumarshivam8210023851@gmail.com" class="footer__social" aria-label="Email"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18"
+                            height="18" aria-hidden="true">
+                            <path
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                </div>
+                <p class="footer__copy">&copy; 2026 Shivam Kumar. All rights reserved.</p>
+                <button class="footer__top" id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 16 16"
+                        fill="none" width="16" height="16" aria-hidden="true">
+                        <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+`
